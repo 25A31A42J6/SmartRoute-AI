@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartRoute AI — Intelligent Query Routing</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="orb orb-a"></div>
+    <div class="orb orb-b"></div>
+
+    <main class="shell">
+        <header class="topbar">
+            <div class="brand">
+                <div class="logo">SR</div>
+                <div>
+                    <h1>SmartRoute <span>AI</span></h1>
+                    <p>Intelligent Customer Query Routing</p>
+                </div>
+            </div>
+            <div class="online"><i></i> MODEL ONLINE</div>
+        </header>
+
+        <section class="hero">
+            <div>
+                <div class="eyebrow">BANKING77 • NLP ROUTING ENGINE</div>
+                <h2>From customer message to <span>service queue.</span></h2>
+                <p>Classify incoming support queries, estimate prediction confidence, and apply a transparent routing
+                    policy before the request reaches an operational queue.</p>
+            </div>
+            <div class="performance">
+                <small>OFFICIAL TEST ACCURACY</small><strong>87.24%</strong>
+                <div class="perf-line"></div>
+                <div class="stats"><span><b>10,003</b> train</span><span><b>3,080</b> test</span><span><b>77</b>
+                        intents</span></div>
+            </div>
+        </section>
+
+        <section class="routing-policy">
+            <div class="policy-title"><span>ROUTING POLICY</span><small>Confidence-aware decision layer</small></div>
+            <div class="policy-grid">
+                <div class="policy high"><b>≥ 80%</b><span>Auto Route</span><small>High confidence</small></div>
+                <div class="policy medium"><b>60–79%</b><span>Route + Review</span><small>Review recommended</small>
+                </div>
+                <div class="policy low"><b>&lt; 60%</b><span>Human Review</span><small>Low confidence</small></div>
+            </div>
+        </section>
+
+        <section class="workspace">
+            <div class="panel">
+                <div class="heading">
+                    <div><em>01</em>
+                        <h3>Customer Query</h3>
+                    </div><span class="live">LIVE</span>
+                </div>
+                <textarea id="queryInput" maxlength="1000"
+                    placeholder="Example: My card payment was charged twice..."></textarea>
+                <div class="inputbar"><span id="charCount">0 / 1000</span><button id="clearBtn"
+                        class="ghost">Clear</button><button id="analyzeBtn" class="primary">Analyze Query
+                        <b>→</b></button></div>
+                <div class="examples"><span>Try:</span><button>My card payment was charged twice</button><button>I
+                        forgot my passcode</button><button>How long will my transfer take?</button></div>
+            </div>
+
+            <div class="panel result">
+                <div class="heading">
+                    <div><em>02</em>
+                        <h3>Routing Decision</h3>
+                    </div><span id="badge" class="badge">WAITING</span>
+                </div>
+                <div id="empty" class="empty">
+                    <div class="empty-icon">⌁</div><b>Awaiting customer query</b><small>Prediction and routing decision
+                        will appear here.</small>
+                </div>
+                <div id="loading" class="empty hidden">
+                    <div class="spinner"></div><b>Analyzing query...</b><small>Running the trained classifier.</small>
+                </div>
+
+                <div id="result" class="hidden">
+                    <small class="cyan">PREDICTED SERVICE CATEGORY</small>
+                    <h4 id="category">—</h4>
+                    <div class="confidence">
+                        <div><span>Model confidence</span><b id="confidence">0%</b></div>
+                        <div class="track"><i id="bar"></i></div>
+                    </div>
+                    <div id="decision" class="decision">
+                        <div id="decisionIcon" class="decision-icon">✓</div>
+                        <div><b id="decisionLabel">—</b><small id="decisionDetail">—</small></div>
+                    </div>
+                    <div class="queue"><small class="cyan">SERVICE QUEUE</small><b id="queueName">—</b><span
+                            id="queueNote">Determined from predicted intent.</span></div>
+                    <div class="alternatives"><small class="cyan">TOP PREDICTED INTENTS</small>
+                        <div id="topPredictions"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="dashboard panel">
+            <div class="section-head">
+                <div>
+                    <div class="eyebrow">03 • OPERATIONS</div>
+                    <h3>Routing Analytics</h3>
+                </div>
+                <button id="clearHistory" class="ghost">Clear History</button>
+            </div>
+
+            <div class="kpi-grid">
+                <div class="kpi"><small>TOTAL QUERIES</small><b id="totalQueries">0</b><span>Analyzed in this
+                        browser</span></div>
+                <div class="kpi"><small>AUTO ROUTED</small><b id="autoRouted">0</b><span>High-confidence cases</span>
+                </div>
+                <div class="kpi"><small>NEEDS REVIEW</small><b id="needsReview">0</b><span>Medium + low
+                        confidence</span></div>
+                <div class="kpi"><small>AVG CONFIDENCE</small><b id="avgConfidence">0%</b><span>Across analyzed
+                        queries</span></div>
+            </div>
+
+            <div class="analytics-grid">
+                <div class="chart-card">
+                    <div class="chart-title">Decision Distribution</div>
+                    <div id="decisionBars" class="bars"></div>
+                </div>
+                <div class="chart-card">
+                    <div class="chart-title">Service Queue Distribution</div>
+                    <div id="queueBars" class="bars"></div>
+                </div>
+            </div>
+
+            <div class="history-wrap">
+                <div class="chart-title">Recent Routing History</div>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>TIME</th>
+                                <th>CUSTOMER QUERY</th>
+                                <th>PREDICTED INTENT</th>
+                                <th>CONFIDENCE</th>
+                                <th>DECISION</th>
+                                <th>SERVICE QUEUE</th>
+                            </tr>
+                        </thead>
+                        <tbody id="historyBody">
+                            <tr>
+                                <td colspan="6" class="no-data">No queries analyzed yet.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <footer><span>SmartRoute AI</span><span>TF-IDF + Logistic Regression</span><span>Confidence-aware
+                routing</span><span>BANKING77</span></footer>
+    </main>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>

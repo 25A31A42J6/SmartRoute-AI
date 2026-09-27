@@ -1,0 +1,151 @@
+text,label
+my card payment was declined,card_payment_issue
+card payment did not go through,card_payment_issue
+my card was not accepted,card_payment_issue
+payment with my card failed,card_payment_issue
+why was my card payment declined,card_payment_issue
+card transaction failed,card_payment_issue
+my card payment is not working,card_payment_issue
+merchant declined my card,card_payment_issue
+card payment keeps failing,card_payment_issue
+payment was rejected on my card,card_payment_issue
+cash withdrawal failed,cash_withdrawal
+the atm did not give me cash,cash_withdrawal
+my cash withdrawal was declined,cash_withdrawal
+i could not withdraw money,cash_withdrawal
+atm withdrawal did not work,cash_withdrawal
+cash machine declined my request,cash_withdrawal
+why can i not take cash from atm,cash_withdrawal
+my atm withdrawal failed,cash_withdrawal
+cash withdrawal is pending,cash_withdrawal
+the atm transaction failed,cash_withdrawal
+when will my card arrive,card_arrival
+where is my new card,card_arrival
+how long does card delivery take,card_arrival
+my card has not arrived,card_arrival
+track my card delivery,card_arrival
+when should i expect my card,card_arrival
+card delivery is late,card_arrival
+how long for a new card to arrive,card_arrival
+my physical card is still missing,card_arrival
+card delivery estimate please,card_arrival
+i was charged for withdrawing cash,cash_withdrawal_charge
+why is there an atm fee,cash_withdrawal_charge
+cash withdrawal fee appeared,cash_withdrawal_charge
+atm charged me extra,cash_withdrawal_charge
+why did i pay a withdrawal charge,cash_withdrawal_charge
+there is a fee on my cash withdrawal,cash_withdrawal_charge
+cash machine charged me,cash_withdrawal_charge
+unexpected atm fee,cash_withdrawal_charge
+what is the cash withdrawal charge,cash_withdrawal_charge
+i was charged when taking cash,cash_withdrawal_charge
+i was charged for a transfer,transfer_fee
+why did my transfer cost money,transfer_fee
+transfer fee appeared,transfer_fee
+there is a charge on my transfer,transfer_fee
+how much is the transfer fee,transfer_fee
+unexpected transfer charge,transfer_fee
+why was i charged for sending money,transfer_fee
+fee for bank transfer,transfer_fee
+my transfer has an extra fee,transfer_fee
+transfer cost was added,transfer_fee
+i want a refund,refund_request
+how can i request a refund,refund_request
+please refund my transaction,refund_request
+i need to get my money back,refund_request
+can i request a refund,refund_request
+help me with a refund,refund_request
+i want to return this payment,refund_request
+how do i ask for a refund,refund_request
+refund this card purchase,refund_request
+i need a refund for a transaction,refund_request
+my refund has not arrived,refund_missing
+where is my refund,refund_missing
+refund is still missing,refund_missing
+i have not received the refund,refund_missing
+my refund has not shown up,refund_missing
+when will my refund arrive,refund_missing
+refund was approved but i cannot see it,refund_missing
+refund is delayed,refund_missing
+the refunded amount is not in my account,refund_missing
+i am waiting for my refund,refund_missing
+i do not recognize this cash withdrawal,cash_not_recognised
+unknown atm transaction,cash_not_recognised
+someone withdrew cash from my account,cash_not_recognised
+cash withdrawal is not mine,cash_not_recognised
+unrecognized atm transaction,cash_not_recognised
+there is an atm withdrawal i did not make,cash_not_recognised
+i did not withdraw this money,cash_not_recognised
+unknown cash withdrawal,cash_not_recognised
+cash was taken from my account,cash_not_recognised
+this withdrawal is suspicious,cash_not_recognised
+i do not recognize this card payment,card_not_recognised
+unknown card transaction,card_not_recognised
+this card purchase is not mine,card_not_recognised
+unrecognized card payment,card_not_recognised
+someone used my card,card_not_recognised
+there is a card payment i did not make,card_not_recognised
+i do not remember this card transaction,card_not_recognised
+unknown purchase on my card,card_not_recognised
+this payment is not recognized,card_not_recognised
+card transaction looks unfamiliar,card_not_recognised
+how do i change my pin,change_pin
+i want to change my card pin,change_pin
+where can i update my pin,change_pin
+can i change my pin in the app,change_pin
+help me change my pin,change_pin
+i forgot how to change my pin,change_pin
+change my pin please,change_pin
+i need a new pin,change_pin
+how can i set a different pin,change_pin
+pin change instructions,change_pin
+my top up failed,top_up_failed
+i cannot add money to my account,top_up_failed
+top up is not working,top_up_failed
+why did my top up fail,top_up_failed
+card top up failed,top_up_failed
+adding money failed,top_up_failed
+my account top up was declined,top_up_failed
+top up keeps failing,top_up_failed
+i could not top up,top_up_failed
+the top up transaction failed,top_up_failed
+my balance has not updated,balance_not_updated
+money is missing from my balance,balance_not_updated
+my account balance is wrong,balance_not_updated
+balance did not change,balance_not_updated
+why is my balance not updated,balance_not_updated
+i transferred money but balance is unchanged,balance_not_updated
+cash deposit is not showing,balance_not_updated
+my new balance is not visible,balance_not_updated
+the balance still shows the old amount,balance_not_updated
+account balance has not refreshed,balance_not_updated
+how do i verify my identity,identity_verification
+identity verification is required,identity_verification
+help me verify my identity,identity_verification
+why do i need to verify my identity,identity_verification
+verification is not complete,identity_verification
+i cannot verify my identity,identity_verification
+what documents are needed for verification,identity_verification
+identity check help,identity_verification
+where can i complete verification,identity_verification
+my identity verification failed,identity_verification
+i lost my card,lost_or_stolen_card
+my card was stolen,lost_or_stolen_card
+what do i do if my card is lost,lost_or_stolen_card
+someone stole my card,lost_or_stolen_card
+i cannot find my card,lost_or_stolen_card
+my physical card is missing,lost_or_stolen_card
+lost card help,lost_or_stolen_card
+my card has been stolen,lost_or_stolen_card
+how can i report a lost card,lost_or_stolen_card
+i need to block my lost card,lost_or_stolen_card
+contactless is not working,contactless_not_working
+my tap payment does not work,contactless_not_working
+contactless card failed,contactless_not_working
+why is tap to pay not working,contactless_not_working
+my contactless payments stopped,contactless_not_working
+card tap is not working,contactless_not_working
+contactless transaction failed,contactless_not_working
+i cannot use contactless,contactless_not_working
+tap payments are failing,contactless_not_working
+contactless feature is broken,contactless_not_working

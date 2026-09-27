@@ -1,0 +1,13 @@
+{
+    "dataset": "BANKING77",
+    "training_samples": 10003,
+    "test_samples": 3080,
+    "classes": 77,
+    "accuracy": 0.872403,
+    "weighted_precision": 0.880168,
+    "weighted_recall": 0.872403,
+    "weighted_f1": 0.872572,
+    "model": "TF-IDF + Logistic Regression",
+    "ngram_range": "(1,2)",
+    "random_state": 42
+}
